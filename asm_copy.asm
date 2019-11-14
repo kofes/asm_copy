@@ -1,4 +1,4 @@
-; void asm_copy(uint8_t* source, uint8_t* output, std::size_t size);
+; void asm_copy(void* output, void* source, size_t size);
 
 ; x64 Linux:
 ; 1. From left to right, pass as many parameters as will fit in registers. The order in which registers are allocated, are:
