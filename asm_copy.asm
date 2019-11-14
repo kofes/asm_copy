@@ -27,22 +27,22 @@ section .text
 asm_copy_u8:
     mov rcx, rdx; size -> rcx
     rep movsb; copy
-    ret; return
+    ret
 
 asm_copy_u16:
     mov rcx, rdx; size -> rcx
-    rep movsw; copy
-    ret; return
+    rep movsw
+    ret
 
 asm_copy_u32:
     mov rcx, rdx; size -> rcx
-    rep movsd; copy
-    ret; return
+    rep movsd
+    ret
 
 asm_copy_u64:
     mov rcx, rdx; size -> rcx
-    rep movsq; copy
-    ret; return
+    rep movsq
+    ret
 
 asm_copy_u128:
     mov rcx, rdx; size -> rcx
@@ -52,8 +52,8 @@ u128_copy_loop:
     jge u128_copy_end
     mov rax, rdx
     shl rax, 4
-    movdqa xmm1, [rsi+rax];
-    movdqa [rdi+rax], xmm1;+rdx*2+1
+    movdqa xmm1, [rsi+rax]
+    movdqa [rdi+rax], xmm1
     add rdx, 1
     jmp u128_copy_loop
 u128_copy_end:
@@ -68,8 +68,8 @@ u256_copy_loop:
     jge u256_copy_end
     mov rax, rdx
     shl rax, 5
-    vmovdqu ymm1, [rsi+rax];
-    vmovdqu [rdi+rax], ymm1;
+    vmovdqu ymm1, [rsi+rax]
+    vmovdqu [rdi+rax], ymm1
     add rdx, 1
     jmp u256_copy_loop
 u256_copy_end:
@@ -84,8 +84,8 @@ u512_copy_loop:
     jge u512_copy_end
     mov rax, rdx
     shl rax, 6
-    vmovupd zmm1, [rsi+rax];
-    vmovupd [rdi+rax], zmm1;
+    vmovupd zmm1, [rsi+rax]
+    vmovupd [rdi+rax], zmm1
     add rdx, 1
     jmp u512_copy_loop
 u512_copy_end:
