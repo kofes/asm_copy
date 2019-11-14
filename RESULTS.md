@@ -1,8 +1,8 @@
 # Results
 ## Environment
-CPU: Intel Core i7-8750H @ 12x 2.208GHz
-Kernel: x86_64 Linux 4.4.0-18362-Microsoft
-OS: Ubuntu 18.04 bionic [Ubuntu on Windows 10]
+- CPU: Intel Core i7-8750H @ 12x 2.208GHz
+- Kernel: x86_64 Linux 4.4.0-18362-Microsoft
+- OS: Ubuntu 18.04 bionic [Ubuntu on Windows 10]
 ## clang [6.0.0-1ubuntu2]/NASM[2.13.02]
 ```
 [100][(unsigned char)/1](max, min, average): (0.45s, 0.1s, 0.1215s)
