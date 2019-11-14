@@ -1,12 +1,12 @@
 ## asm_copy
 
-**Enviroment**: Linux
+**Environment**: Linux
 **Needs**:
 - nasm
 - llvm/g++
 
 **Exec**
-1. run `make.sh` script with the compiler executable as argument
+1. run `make.sh` script with the compiler executable file as argument
 
 ##### example:
 ```
