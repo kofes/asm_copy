@@ -35,3 +35,23 @@
 [100][(VMOVDQU_256)/32](max, min, average): (0.14s, 0.1s, 0.1189s)
 [100][(VMOVDQU_512)/64](max, min, average): (-1s, -1s, -1s)
 ```
+## Enviroment
+- CPU: Intel Core i7-8750H @ 12x 4.1GHz
+- Kernel: x86_64 Linux 5.0.0-38-generic
+- OS: Ubuntu 19.10 eoan
+## gcc [9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2)]/NASM[2.14.02]
+```
+[100][(unsigned char)/1](max, min, average): (0.21s, 0.06s, 0.0716s)
+[100][(unsigned short)/2](max, min, average): (0.08s, 0.06s, 0.0674s)
+[100][(unsigned int)/4](max, min, average): (0.07s, 0.06s, 0.067s)
+[100][(unsigned long)/8](max, min, average): (0.07s, 0.06s, 0.0671s)
+[100][(MEMCPY)/1](max, min, average): (0.04s, 0.02s, 0.0278s)
+[100][(COPY)/1](max, min, average): (0.03s, 0.02s, 0.0277s)
+[100][(MOVSB)/1](max, min, average): (0.04s, 0.03s, 0.0366s)
+[100][(MOVSW)/2](max, min, average): (0.04s, 0.03s, 0.0367s)
+[100][(MOVSD)/4](max, min, average): (0.05s, 0.03s, 0.0367s)
+[100][(MOVSQ)/8](max, min, average): (0.04s, 0.03s, 0.0366s)
+[100][(MOVSDQA)/16](max, min, average): (0.07s, 0.06s, 0.0664s)
+[100][(VMOVDQU_256)/32](max, min, average): (0.08s, 0.07s, 0.0716s)
+[100][(VMOVDQU_512)/64](max, min, average): (-1s, -1s, -1s)
+```
